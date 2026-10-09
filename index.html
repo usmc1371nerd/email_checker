@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cyber Scout Phishing Analyzer checks pasted email text for common phishing warning signs directly in your browser.">
+    <title>Cyber Scout Phishing Analyzer | Cyber Scout Labs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#analyzer">Skip to analyzer</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="Cyber Scout Labs home">
+          <span class="brand-mark" aria-hidden="true">CS</span>
+          <span>Cyber Scout Labs</span>
+        </a>
+        <div class="nav-links">
+          <a href="#analyzer">Analyzer</a>
+          <a href="#how">How It Works</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Cyber Scout Phishing Analyzer</p>
+          <h1>Is That Email Trying to Trick You?</h1>
+          <p class="lede">Check an email for common phishing warning signs. Load a downloaded .eml file or paste redacted text, and our free analyzer examines suspicious language, links, headers, and other indicators directly in your browser. No account required, and your email stays on your device.</p>
+          <p class="tagline">Spot the warning signs. Stay one step ahead.</p>
+        </div>
+        <div class="signal-panel" aria-label="Analyzer safeguards">
+          <div><strong>Local only</strong><span>No uploads, trackers, or network lookups.</span></div>
+          <div><strong>Explainable</strong><span>Every finding shows evidence and points.</span></div>
+          <div><strong>Conservative</strong><span>A low score never means guaranteed safe.</span></div>
+        </div>
+      </section>
+
+      <section id="analyzer" class="section analyzer-grid" aria-labelledby="analyzer-title">
+        <div class="input-panel">
+          <h2 id="analyzer-title">Analyze a Suspicious Email</h2>
+
+          <aside class="notice" aria-labelledby="privacy-notice-title">
+            <h3 id="privacy-notice-title">Privacy &amp; Safety Notice</h3>
+            <p>Please do not load or paste emails containing personal, financial, medical, or other sensitive information, or adult or graphic content.</p>
+            <p>This tool analyzes the file or text you provide directly in your browser. Your email content is not uploaded, saved, or sent to Cyber Scout Labs.</p>
+            <p>This is an educational tool that looks for potential phishing warning signs. It cannot guarantee whether an email is safe or malicious. Always use your best judgment.</p>
+            <label class="check-row">
+              <input id="consent" type="checkbox">
+              <span>I understand this tool is for educational purposes and will avoid submitting sensitive information.</span>
+            </label>
+          </aside>
+
+          <form id="analyzer-form" novalidate>
+            <label class="textarea-label" for="eml-file">Load an Email File</label>
+            <p class="field-help">For the most complete analysis, download the suspicious message from your email app as an <code>.eml</code> file, then load it here. The file is read locally in your browser.</p>
+            <input id="eml-file" class="file-input" type="file" accept=".eml,message/rfc822,text/plain" aria-describedby="file-help input-error">
+            <p id="file-help" class="field-help">Maximum file size: 2 MB. You can still paste redacted email text below if you do not have an .eml file.</p>
+            <details class="help-details">
+              <summary>How do I get an .eml file?</summary>
+              <p>In most email apps, open the suspicious email and look for a More menu, three-dot menu, Save As, Download Message, or Show Original option. Save the message as an .eml file, then choose it here.</p>
+            </details>
+
+            <label class="textarea-label secondary-label" for="email-input">Email Text to Analyze</label>
+            <p class="field-help">Review the extracted text and redact anything sensitive before analyzing. Limit: 120,000 characters.</p>
+            <textarea id="email-input" rows="14" maxlength="120000" spellcheck="false" aria-describedby="input-help input-error"></textarea>
+            <div class="form-meta">
+              <span id="input-help">File loading and analysis stay disabled until you acknowledge the notice.</span>
+              <span id="char-count">0 / 120,000</span>
+            </div>
+            <p id="input-error" class="error" role="alert"></p>
+            <div class="controls">
+              <button id="analyze-button" class="primary" type="submit" disabled>Analyze Email</button>
+              <button id="clear-button" type="button">Clear Email</button>
+            </div>
+          </form>
+
+        </div>
+
+        <section class="results-panel" aria-labelledby="results-title">
+          <h2 id="results-title">Concern Summary</h2>
+          <div id="empty-results" class="empty-state">
+            <p>Load a redacted .eml file or paste email text, acknowledge the notice, and run the analyzer to see warning signs here.</p>
+          </div>
+          <div id="results" class="results" hidden></div>
+          <div id="status" class="sr-only" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <section id="how" class="section split" aria-labelledby="how-title">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Paste, Review, Verify Independently</h2>
+          <p>This tool checks for common warning signs in the text you provide. It does not decide whether a message is safe or malicious, and it never opens links or inspects actual attachments.</p>
+        </div>
+        <ol class="steps">
+          <li><strong>Load</strong><span>Use a downloaded .eml file when possible, or paste redacted email text, headers, or HTML.</span></li>
+          <li><strong>Review</strong><span>Read each observation, evidence excerpt, point value, and recommendation.</span></li>
+          <li><strong>Verify</strong><span>Use official websites, apps, or known contact details instead of email-supplied instructions.</span></li>
+        </ol>
+      </section>
+
+      <section class="section education" aria-labelledby="education-title">
+        <p class="eyebrow">Education</p>
+        <h2 id="education-title">Useful Terms Without the Scare Tactics</h2>
+        <div class="glossary">
+          <article><h3>Phishing</h3><p>A deceptive message designed to make you reveal information, open something risky, or send money.</p></article>
+          <article><h3>Spoofing</h3><p>A forged or misleading sender identity. A display name can be fake even when it looks familiar.</p></article>
+          <article><h3>MFA</h3><p>Multi-factor authentication adds a second proof, such as an app prompt or one-time code. Never share codes by email.</p></article>
+          <article><h3>SPF, DKIM, DMARC</h3><p>Email authentication checks that can help receiving systems evaluate sender legitimacy. This tool only reads reported results in pasted headers.</p></article>
+          <article><h3>Suspicious Links</h3><p>Shorteners, raw IP addresses, misleading text, and unusual URL structures can hide where a link goes.</p></article>
+          <article><h3>Impersonation</h3><p>Fraudsters may pretend to be executives, IT staff, banks, delivery services, or familiar vendors.</p></article>
+        </div>
+      </section>
+
+      <section id="privacy" class="section privacy-band" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Private by Design</h2>
+        <p><strong>Private by Design: Your email is analyzed directly in your browser. Nothing you load or paste is uploaded to our servers or saved by Cyber Scout Labs.</strong></p>
+        <p>The application does not use cookies, local storage, analytics, remote scripts, URL previews, file uploads, or link expansion. Your hosting provider may still process ordinary website-access metadata, such as an IP address requesting the static page files.</p>
+      </section>
+
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <h2 id="about-title">About Cyber Scout Labs</h2>
+        <p>Cyber Scout Labs builds practical security education tools for everyday decisions. This analyzer is an educational triage aid, not a definitive determination. It cannot confirm whether a URL is malicious, independently authenticate a sender, inspect attachments, find every attack, or guarantee a message is safe.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; Cyber Scout Labs. Educational use only.</p>
+      <a href="https://cyberscoutlabs.com" rel="noopener">cyberscoutlabs.com</a>
+    </footer>
+  </body>
+</html>
