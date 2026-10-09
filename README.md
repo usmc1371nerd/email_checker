@@ -38,6 +38,15 @@ The same test runner can also be executed with Node:
 npm test
 ```
 
+## User Help Links
+
+The upload help panel links users to provider documentation for getting a usable message copy or full headers:
+
+- Gmail: https://support.google.com/mail/answer/9261412?hl=en
+- Microsoft Outlook: https://support.microsoft.com/office/save-a-message-as-a-file-4821bcd4-7687-4d6d-a486-b89a291a56e2
+- Outlook.com / Hotmail: https://support.microsoft.com/office/view-email-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c
+- Yahoo Mail: https://help.yahoo.com/kb/account/sln22026.html
+
 ## Deploying to Hostinger
 
 This is a static site. For Hostinger, publish the repository root to the subdomain's document root, commonly `public_html/<subdomain>` or the folder Hostinger assigns to that subdomain.
