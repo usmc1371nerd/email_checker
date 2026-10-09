@@ -47,18 +47,6 @@ The upload help panel links users to provider documentation for getting a usable
 - Outlook.com / Hotmail: https://support.microsoft.com/office/view-email-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c
 - Yahoo Mail: https://help.yahoo.com/kb/account/sln22026.html
 
-## Deploying to Hostinger
-
-This is a static site. For Hostinger, publish the repository root to the subdomain's document root, commonly `public_html/<subdomain>` or the folder Hostinger assigns to that subdomain.
-
-If using Hostinger's GitHub deployment, set the publish/output directory to the repository root:
-
-```text
-.
-```
-
-No build command is required.
-
 ## File Layout
 
 ```text
